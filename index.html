@@ -236,8 +236,8 @@
       <div class="moving_button">
         <button class="button2 button3" id = "myBtn">Login</button>
         <button class="button4 button3" id = "myBtn2">Sign Up</button>
-        <a href=""><button class="button2 button3">About</button></a>
-        <a href=""><button class="button2 button3">Help</button></a>
+        <button class="button2 button3" id = "myBtn3">About</button>
+        <button class="button2 button3" id = "myBtn4">Help</button>
       </div>
   </div>
   <div id = "signin"> 
@@ -268,6 +268,32 @@
       </div>
     </div>
   </div>
+  <div id = "About"> 
+    <div id="myModal3" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close3">&times;</span>
+          <h2>About</h2>
+        </div>
+        <div class="modal-body">
+          <p>This is a music streaming website with lots of new features comming in the comming weeks.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "Help"> 
+    <div id="myModal4" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close4">&times;</span>
+          <h2>Help</h2>
+        </div>
+        <div class="modal-body">
+          <p>Buy the book: INTERNET FOR DUMMMYS</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <script>
 var modal = document.getElementById('myModal');
@@ -285,6 +311,8 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+
 var modal2 = document.getElementById('myModal2');
 var btn2 = document.getElementById("myBtn2");
 
@@ -298,6 +326,39 @@ span2.onclick = function() {
 window.onclick = function(event) {
     if (event.target == modal2) {
         modal2.style.display = "none";
+    }
+}
+
+
+var modal3 = document.getElementById('myModal3');
+var btn3 = document.getElementById("myBtn3");
+
+var span3 = document.getElementsByClassName("close3")[0];
+btn3.onclick = function() {
+    modal3.style.display = "block";
+}
+span3.onclick = function() {
+    modal3.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal3.style.display = "none";
+    }
+}
+
+var modal4 = document.getElementById('myModal4');
+var btn4 = document.getElementById("myBtn4");
+
+var span4 = document.getElementsByClassName("close4")[0];
+btn4.onclick = function() {
+    modal4.style.display = "block";
+}
+span4.onclick = function() {
+    modal4.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal4.style.display = "none";
     }
 }
 </script>

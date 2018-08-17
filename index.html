@@ -228,6 +228,7 @@
 </head>
 <body>
   <link href="https://fonts.googleapis.com/css?family=Fruktur" rel="stylesheet"> 
+    
   <div class="sidebar">
       <div class="image2">
           <img src="imagelogo.jpg" class="img-bottom" alt="image1">
@@ -235,31 +236,17 @@
       </div>
       <div class="moving_button">
         <button class="button2 button3" id = "myBtn">Login</button>
-        <button class="button4 button3"id = "myBtn2">Sign Up</button>
+        <button class="button4 button3" id = "myBtn2">Sign Up</button>
         <a href=""><button class="button2 button3">About</button></a>
         <a href=""><button class="button2 button3">Help</button></a>
       </div>
   </div>
-  
-  <div id="myModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close">&times;</span>
-      <h2>Login</h2>
-    </div>
-    <div class="modal-body">
-      <p>Username:</p>
-      <p>Password:</p>
-    </div>
-  </div>
-
-</div>
   <div id = "signin"> 
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
           <span class="close">&times;</span>
-          <h2>Signup</h2>
+          <h2>Login</h2>
         </div>
         <div class="modal-body">
           <p>Username:</p>
@@ -273,7 +260,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <span class="close2">&times;</span>
-          <h2>Login</h2>
+          <h2>Sign Up</h2>
         </div>
         <div class="modal-body">
           <p>Username:</p>
@@ -299,21 +286,19 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-</script>
-<script>
-var modal = document.getElementById('myModal2');
-var btn = document.getElementById("myBtn2");
+var modal2 = document.getElementById('myModal2');
+var btn2 = document.getElementById("myBtn2");
 
-var span = document.getElementsByClassName("close2")[0];
-btn.onclick = function() {
-    modal.style.display = "block";
+var span2 = document.getElementsByClassName("close2")[0];
+btn2.onclick = function() {
+    modal2.style.display = "block";
 }
-span.onclick = function() {
-    modal.style.display = "none";
+span2.onclick = function() {
+    modal2.style.display = "none";
 }
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == modal2) {
+        modal2.style.display = "none";
     }
 }
 </script>

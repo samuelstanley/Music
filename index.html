@@ -195,6 +195,27 @@
       text-decoration: none;
       cursor: pointer;
   }
+    .close2 {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close2:hover,
+  .close2:focus {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .modal-header {
+      padding: 2px 16px;
+      background-color: black;
+      color: white;
+  }
+
+  .modal-body {padding: 2px 16px;}
 
   .modal-header {
       padding: 2px 16px;
@@ -214,7 +235,7 @@
       </div>
       <div class="moving_button">
         <button class="button2 button3" id = "myBtn">Login</button>
-        <button class="button4 button3">Sign Up</button>
+        <button class="button4 button3"id = "myBtn2">Sign Up</button>
         <a href=""><button class="button2 button3">About</button></a>
         <a href=""><button class="button2 button3">Help</button></a>
       </div>
@@ -233,11 +254,57 @@
   </div>
 
 </div>
+  <div id = "signin"> 
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Signup</h2>
+        </div>
+        <div class="modal-body">
+          <p>Username:</p>
+          <p>Password:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "signup"> 
+    <div id="myModal2" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close2">&times;</span>
+          <h2>Login</h2>
+        </div>
+        <div class="modal-body">
+          <p>Username:</p>
+          <p>Password:</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script>
 var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
 
 var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+span.onclick = function() {
+    modal.style.display = "none";
+}
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+var modal = document.getElementById('myModal2');
+var btn = document.getElementById("myBtn2");
+
+var span = document.getElementsByClassName("close2")[0];
 btn.onclick = function() {
     modal.style.display = "block";
 }
